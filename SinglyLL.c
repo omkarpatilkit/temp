@@ -24,6 +24,21 @@ int count(pnodePtr Head)
 	return n;
 }
 
+int checkFreq(pnodePtr Head, int num)
+{
+	nodePtr temp = *Head;
+	int cnt = 0;
+	while (temp->next != NULL)
+	{
+		if (temp->data == num)
+		{
+			cnt++;
+		}
+		temp = temp->next;
+	}
+	return cnt;
+}
+
 void DisplayList(pnodePtr Head)
 {
 
@@ -110,11 +125,38 @@ void DeleteAtFirst(pnodePtr Head)
 	else if ((*Head)->next == NULL)
 	{
 		*Head = NULL;
+		return;
 	}
 
 	nodePtr temp = *Head;
 	*Head = (*Head)->next;
 	free(temp);
+}
+
+void DeletePerticular(pnodePtr Head, int num)
+{
+	int freq = checkFreq(Head, num);
+	nodePtr temp2 = NULL;
+
+	nodePtr temp = *Head;
+	if (temp->data == num)
+	{
+		DeleteAtFirst(Head);
+		temp = *Head;
+	}
+
+	while (temp != NULL)
+	{
+		if (temp->next->data == num)
+		{
+			temp2 = temp->next;
+			temp->next = temp->next->next;
+			free(temp2);
+		}
+		temp = temp->next;
+	}
+
+	DisplayList(Head);
 }
 
 int main()
@@ -136,6 +178,7 @@ int main()
 		printf("4 : Insert node at Last position\n");
 		printf("5 : Delete node at Last position\n");
 		printf("6 : Delete node at First position\n");
+		printf("7 : Delete perticular data\n");
 
 		printf("\n____________________________________\n");
 		printf("Please select a option : \n");
@@ -176,6 +219,12 @@ int main()
 
 		case 6:
 			DeleteAtFirst(&First);
+			break;
+
+		case 7:
+			printf("Please enter a number.\n");
+			scanf("%d", &no);
+			DeletePerticular(&First, no);
 			break;
 		}
 	}
