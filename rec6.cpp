@@ -19,9 +19,9 @@ int countWhitespace(char arr[])
 int main()
 {
     char arr[20];
-    cout << "Please enter a name:";
-    cin >> arr;
-
+    cout << "Please enter a name:\n";
+    scanf ("%[^\n]s", arr);
+    printf( "%s\n", arr);
     int cnt = countWhitespace(arr);
     cout << cnt << endl;
     return 0;
