@@ -12,7 +12,7 @@ public:
                 cout << i << "\t";
         } // end of for loop
         cout << "\n";
-    }// end of method
+    } // end of method
 
     void displayEvenFactors(int num)
     {
@@ -24,5 +24,18 @@ public:
         cout << "\n";
     }
 
-}// end of class
+    void convertCase(char c)
+    {
+        if (c >= 'a' && c <= 'z')
+        {
+            c = c - 32;
+        }
+        else if(c >= 'A' && c <= 'Z')
+        {
+            c = c + 32;
+        }
+        cout << c << "\n";
+    }
+
+} // end of class
 ;

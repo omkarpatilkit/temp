@@ -17,4 +17,17 @@ public class m3 {
         System.out.println();
     }
 
+    public void convertCase (char c){
+
+        if (c >= 'a' && c <= 'z')
+        {
+            c = (char) (c - 32);
+        }
+        else if(c >= 'A' && c <= 'Z')
+        {
+            c = (char) (c + 32);
+        }
+        System.out.println(c);
+    }
+
 }

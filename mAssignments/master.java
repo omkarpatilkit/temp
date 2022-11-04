@@ -7,6 +7,7 @@ public class master{
         m3 m = new m3();
         m.displayFactors(34);
         m.displayEvenFactors(50);
+        m.convertCase('m');
         
     }
 }
