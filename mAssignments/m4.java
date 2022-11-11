@@ -29,4 +29,30 @@ public class m4 {
         return false;
     }
 
+    public String toString() {
+        return "Hello there";
+    }
+
+    public int countEven(int a) {
+        int res = 0;
+        while (a > 0) {
+            if ((a % 10) % 2 == 0)
+                res++;
+            a = a / 10;
+
+        }
+        return res;
+    }
+
+    public int countOdd(int a) {
+        int res = 0;
+        while (a > 0) {
+            if ((a % 10) % 2 != 0)
+                res++;
+            a = a / 10;
+
+        }
+        return res;
+    }
+
 }
