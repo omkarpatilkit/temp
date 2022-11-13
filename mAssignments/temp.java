@@ -3,12 +3,11 @@ package mAssignments;
 public class temp {
 
     public static void main(String[] args) {
-        Pattern p = new Pattern();
-        try {
-            p.square(-2);
-        } catch (negativeInputException e) {
-            System.out.println(e);
-        }
+        int arr[] = ArrayCreator.createArray();
+        Arraytemp a = new Arraytemp(arr);
+
+        Thread t1 = new Thread(a);
+        t1.start();
 
     }
 }
