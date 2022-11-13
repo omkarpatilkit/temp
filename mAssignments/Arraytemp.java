@@ -2,6 +2,9 @@ package mAssignments;
 
 class ArrayTempExcep extends Exception {
     // temp class
+    public String toString() {
+        return "This array is empty";
+    }
 }
 
 public class Arraytemp implements Runnable {
