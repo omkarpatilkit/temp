@@ -3,26 +3,39 @@ package mAssignments;
 public class master {
 
     public static void main(String[] args) {
-        mThreads a = new mThreads("Omkar");
-        mThreads b = new mThreads("Patil");
-        mThreads c = new mThreads("ABCD");
 
-        Thread t1 = new Thread(a);
-        Thread t2 = new Thread(b);
-        Thread t3 = new Thread(c);
+        M17 m = new M17();
+        int a[] = { };
 
-        t1.setPriority(1);
-        t2.setPriority(Thread.MAX_PRIORITY);
-        t3.setPriority(Thread.NORM_PRIORITY);
-
-        try {
-            t1.start();
-            t2.start();
-            t3.start();
-
-        } catch (Exception e) {
+        try{
+            System.out.println(m.addition(a));
+        }
+        catch (m17Excep e){
             System.out.println(e);
         }
+
+        
+
+        // mThreads a = new mThreads("Omkar");
+        // mThreads b = new mThreads("Patil");
+        // mThreads c = new mThreads("ABCD");
+
+        // Thread t1 = new Thread(a);
+        // Thread t2 = new Thread(b);
+        // Thread t3 = new Thread(c);
+
+        // t1.setPriority(1);
+        // t2.setPriority(Thread.MAX_PRIORITY);
+        // t3.setPriority(Thread.NORM_PRIORITY);
+
+        // try {
+        // t1.start();
+        // t2.start();
+        // t3.start();
+
+        // } catch (Exception e) {
+        // System.out.println(e);
+        // }
 
         // Pattern p = new Pattern();
         // p.square(5);
