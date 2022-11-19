@@ -3,18 +3,11 @@ package mAssignments;
 public class master {
 
     public static void main(String[] args) {
+        int a[] = { 4, 3, 8, 4, 9, 7, 6, 8, 45 ,22 , 466};
+        M17 m = new M17(a);
 
-        M17 m = new M17();
-        int a[] = { };
-
-        try{
-            System.out.println(m.addition(a));
-        }
-        catch (m17Excep e){
-            System.out.println(e);
-        }
-
-        
+        Thread t1 = new Thread(m);
+        t1.start();
 
         // mThreads a = new mThreads("Omkar");
         // mThreads b = new mThreads("Patil");
